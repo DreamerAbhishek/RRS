@@ -1,38 +1,111 @@
-.App {
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  float: left;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 25px;
+}
+
+.nav-search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.error-msg {
+  color: red;
+}
+
+.card-section {
+  display: flex;
+  gap: 15px;
+  margin: 15px;
+  flex-wrap: wrap;
+  flex: 25%;
+}
+
+.card {
+  width: 15%;
+  height: 120px;
+  border: thick double red;
+  display: flex;
+}
+
+.card-title {
+  width: 0px;
+  position: relative;
+  bottom: 15px;
+  right: 10px;
+}
+
+.card-total {
+  width: 25px;
+  height: 25px;
+  background-color: orange;
+  border-radius: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-id {
+  background-color: red;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-transform: capitalize;
+  font-size: 28px;
+  font-weight: bold;
+}
+.list-div {
+  background-color: skyblue;
+  border: 1px solid black;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.list-div.read {
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.list-div p {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 45%;
   }
 }
